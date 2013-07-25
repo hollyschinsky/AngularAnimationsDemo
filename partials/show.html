@@ -1,0 +1,21 @@
+<div class="well centerize content" style="height: 170px;">
+    <form>
+        <p><strong>ng-show</strong> Demo</p>
+        <p>Click the buttons below to show a fade effect when displaying different content via animation of the <strong>ng-show</strong> and <strong>ng-hide</strong> directives.</p>
+
+        <div class="btn-group" style="display: block; text-align: center; margin-bottom: 10px">
+            <button ng-click="right=true" class="btn" ng-class="{'btn-primary': right}">Show Right</button>
+            <button ng-click="right=false" class="btn" ng-class="{'btn-primary': !right}">Show Left</button>
+        </div>
+        <div>
+            <span id="two" class="alert alert-info" ng-show="right" ng-animate="'fade'">
+              Showing right content...
+            </span>
+            <span id="one" class="alert alert-info" ng-hide="right" ng-animate="'fade'">
+               Showing left content....
+            </span>
+        </div>
+    </form>
+</div>
+
+

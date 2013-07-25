@@ -1,0 +1,14 @@
+<div class="well centerize content">
+    <p>This sample shows how you can apply your own custom event to your own directive using the <strong>$animator</strong> service and the <strong><em>animate()</em></strong> function.
+    </p>
+    <p>The custom directive called <strong>my-animate-directive</strong> is defined in the <em>directives.js</em> file and binds to the <b>click()</b> event, so when you click on the items
+    below you will trigger the custom event animation. Since the <b>any-animation</b> class is defined in the HTML element for the <b>myEvent</b> event, that will be the class applied via ngAnimate.
+    The <b>any-animation</b>
+    class can be found in the <em>index.css</em> file.</p>
+
+    <ul class="nav nav-pills nav-stacked">
+        <li ng-repeat="artist in artists">
+            <a href="#/customView" my-animate-directive ng-animate="{myEvent:'any-animation'}"> {{artist}} </a>
+        </li>
+    </ul>
+</div>

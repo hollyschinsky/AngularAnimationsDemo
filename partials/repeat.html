@@ -1,0 +1,12 @@
+
+    <div class="well centerize content">
+        <p><strong>ng-repeat</strong> Demo</p>
+        <p>This view shows how the <strong>ng-repeat</strong> can be animated to appear as if it's rotating when displaying the list and upon
+            adding a new item.</p>
+        <button ng-click="addItem()">Add</button>
+        <ul class="nav nav-pills nav-stacked">
+            <li ng-repeat="artist in artists" ng-animate="'rotate'">
+                <a href="#"> {{artist}} </a>
+            </li>
+        </ul>
+    </div>

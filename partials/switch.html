@@ -1,0 +1,48 @@
+<div class="well centerize content" >
+
+    <form>
+        <p><strong>ng-switch</strong> Demo</p>
+        <p>Select the type of effect and then click through the buttons below to see the effect in action as
+            the quotes are switched. </p>
+        <select class="centerize" ng-model="choice" ng-options="key as value for (key,value) in options"></select>
+
+        <br>
+        <div class="btn-group" style="display: block; text-align: center; margin-bottom: 10px">
+            <button ng-click="quote = '1';" class="btn btn-primary">Dalai Lama</button>
+            <button ng-click="quote = '2';" class="btn btn-primary">Walt Disney</button>
+            <button ng-click="quote = '3';" class="btn btn-primary">Helen Keller</button>
+            <button ng-click="quote = '4';" class="btn btn-primary">Thomas Fuller</button>
+        </div>
+
+        <div ng-switch on="quote" ng-animate="'{{choice}}'">
+            <div ng-switch-when="1">
+                <h3>The Dalia Lama Says...</h3>
+                <blockquote>
+                    <p style="font-size: 15px">Be kind whenever possible. It is always possible.</p>
+                    <small><cite title="Dalai Lama"><a href="http://www.brainyquote.com/quotes/quotes/d/dalailama378036.html">Dalai Lama </a></cite></small>
+                </blockquote>
+            </div>
+            <div  ng-switch-when="2">
+                <h3>Walt Disney Says...</h3>
+                <blockquote>
+                    <p style="font-size: 15px">If you can dream it, you can do it. </p>
+                    <small><cite title="Walt Disney"><a href="http://www.brainyquote.com/quotes/topics/topic_motivational.html#EcKUKeYUtQ2xvjDW.99">Walt Disney</a></cite></small>
+                </blockquote>
+            </div>
+            <div  ng-switch-when="3">
+                <h3>Helen Keller Says...</h3>
+                <blockquote>
+                    <p style="font-size: 15px">Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.</p>
+                    <small><cite title="Helen Keller "><a href="http://www.brainyquote.com/quotes/quotes/h/helenkelle164579.html">Helen Keller </a></cite></small>
+                </blockquote>
+            </div>
+            <div  ng-switch-when="4">
+                <h3>Thomas Fuller Says...</h3>
+                <blockquote>
+                    <p style="font-size: 15px">All things are difficult before they are easy. </p>
+                    <small><cite title="Thomas Fuller"><a href="http://www.brainyquote.com/quotes/topics/topic_work.html#xtMmkDjoypzhmJF8.99">Thomas Fuller</a></cite></small>
+                </blockquote>
+            </div>
+        </div>
+    </form>
+</div>
